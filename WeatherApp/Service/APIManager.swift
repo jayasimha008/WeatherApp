@@ -41,7 +41,7 @@ final class APIManager: APIManagerService {
         // Return data as is if the requested type is Data
         if T.self == Data.self {
             return data as! T
-        }else {
+        } else {
             return try JSONDecoder().decode(T.self, from: data)
         }
     }
